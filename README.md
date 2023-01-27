@@ -7,3 +7,11 @@ expo login
 expo start
 
 expo start --android
+
+npm install -g expo-cli
+
+expo init Project
+
+cd Project
+
+expo start
