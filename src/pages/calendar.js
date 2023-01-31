@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 
-function Profile() {
+function Calendar() {
   return (
     <View style={styles.container}>
-      <Text>Pagina Perfil</Text>
+      <Text>Pagina Calendar</Text>
     </View>
   );
 }
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Profile;
+export { Calendar };
