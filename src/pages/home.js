@@ -1,23 +1,60 @@
-/* import React from "react";
-import { View, StyleSheet } from "react-native";
-
-const Home = () => {
-  return <View style={styles.container}></View>;
-};
-
-const styles = StyleSheet.create({
-  flex: 1,
-  backgroundColor: "cyan",
-});
-
-export default Home; */
-
 import React from "react";
-import { View, Text } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  StatusBar,
+  SafeAreaView,
+  Platform,
+} from "react-native";
+
+const statusBarHeight = StatusBar.currentHeight;
 
 export function Home() {
-  return;
-  <View style={{ flex: 1, backgroundColor: "#25292e" }}>
-    <Text>Bem vindo!</Text>
-  </View>;
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView>
+        <View style={styles.content}>
+          <Text>Conteúdo</Text>
+        </View>
+        <View style={styles.content}>
+          <Text>Conteúdo</Text>
+        </View>
+        <View style={styles.content}>
+          <Text>Conteúdo</Text>
+        </View>
+        <View style={styles.content}>
+          <Text>Conteúdo</Text>
+        </View>
+        <View style={styles.content}>
+          <Text>Conteúdo</Text>
+        </View>
+        <View style={styles.content}>
+          <Text>Conteúdo</Text>
+        </View>
+        <View style={styles.content}>
+          <Text>Conteúdo</Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    paddingTop: Platform.OS === "android" ? statusBarHeight : 25,
+  },
+  content: {
+    alignSelf: "center",
+    flex: 1,
+    width: "98%",
+    height: 120,
+    marginBottom: 20,
+    backgroundColor: "#f1f1f1",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
